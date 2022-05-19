@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,20 @@ namespace Przeszukiwanie2
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void InputFile_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog openFileDialog = new OpenFileDialog();
+            
+            openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+                InputText.Text = File.ReadAllText(openFileDialog.FileName);
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -7,14 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="InputText" HorizontalAlignment="Left" Margin="28,0,0,0" TextWrapping="Wrap" Text="Choose a file ^" VerticalAlignment="Center" Width="161" Height="308"/>
-        <Button x:Name="InputFile" Content="Choose File" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.497,-3.004"/>
-        <TextBox x:Name="ChooseAlgorithm" HorizontalAlignment="Center" Margin="0,63,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="WybieranieAlgorytmu" Content="Wybierz Algorytm:" HorizontalAlignment="Center" Margin="0,195,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
-        <Label x:Name="WybieranieAlgorytmu1" Content="1) Brute Force" HorizontalAlignment="Center" Margin="0,228,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
-        <Label x:Name="WybieranieAlgorytmu2" Content="2)" HorizontalAlignment="Center" Margin="0,261,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
-        <Label x:Name="WybieranieAlgorytmu3" Content="3)" HorizontalAlignment="Center" Margin="0,294,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
-        <Label x:Name="WybieranieAlgorytmu4" Content="4)" HorizontalAlignment="Center" Margin="0,327,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
+        <TextBox x:Name="InputText" HorizontalAlignment="Left" Margin="28,62,0,0" TextWrapping="Wrap" Text="Choose a file ^" VerticalAlignment="Top" Width="161" Height="323"/>
+        <Button x:Name="InputFile" Content="Choose File" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.497,-3.004" Click="InputFile_Click"/>
+        <TextBox x:Name="ChooseAlgorithm" HorizontalAlignment="Left" Margin="233,350,0,0" TextWrapping="Wrap" Text="Wpisz numer algorytmu" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="WybieranieAlgorytmu" Content="Wybierz Algorytm:" HorizontalAlignment="Left" Margin="233,124,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
+        <Label x:Name="WybieranieAlgorytmu1" Content="1) Brute Force" HorizontalAlignment="Left" Margin="233,157,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
+        <Label x:Name="WybieranieAlgorytmu2" Content="2) KMP" HorizontalAlignment="Left" Margin="233,190,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
+        <Label x:Name="WybieranieAlgorytmu3" Content="3) Boyera - Moore'a" HorizontalAlignment="Left" Margin="233,223,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
+        <Label x:Name="WybieranieAlgorytmu4" Content="4) Rabina Karpa" HorizontalAlignment="Left" Margin="233,256,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
+        <Label x:Name="WybieranieAlgorytmu5" Content="Wpisz Wybrany do pudelka numer ponizej" HorizontalAlignment="Left" Margin="233,294,0,0" VerticalAlignment="Top" Height="33" Width="236"/>
+        <TextBox x:Name="PoszukiwanyCiag" HorizontalAlignment="Left" Margin="233,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Wpisz poszukiwany ciag" HorizontalAlignment="Left" Margin="233,44,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Wynik" HorizontalAlignment="Left" Margin="591,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="WynikCzasowy" HorizontalAlignment="Left" Margin="591,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Ilosc danego ciagu" HorizontalAlignment="Left" Margin="591,84,0,0" VerticalAlignment="Top"/>
+        <Label Content="Czas szukania" HorizontalAlignment="Left" Margin="591,199,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="StartButton" Content="Szukaj" HorizontalAlignment="Left" Margin="400,357,0,0" VerticalAlignment="Top" Click="StartButton_Click"/>
 
     </Grid>
 </Window>
