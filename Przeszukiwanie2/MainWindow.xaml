@@ -15,7 +15,7 @@
         <Label x:Name="WybieranieAlgorytmu2" Content="2) KMP" HorizontalAlignment="Left" Margin="233,190,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
         <Label x:Name="WybieranieAlgorytmu3" Content="3) Boyera - Moore'a" HorizontalAlignment="Left" Margin="233,223,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
         <Label x:Name="WybieranieAlgorytmu4" Content="4) Rabina Karpa" HorizontalAlignment="Left" Margin="233,256,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
-        <Label x:Name="WybieranieAlgorytmu5" Content="Wpisz Wybrany do pudelka numer ponizej" HorizontalAlignment="Left" Margin="233,294,0,0" VerticalAlignment="Top" Height="33" Width="236"/>
+        <Label x:Name="WybieranieAlgorytmu5" Content="Wpisz 1, 2, 3, lub 4 do pudelka ponizej" HorizontalAlignment="Left" Margin="233,294,0,0" VerticalAlignment="Top" Height="33" Width="213"/>
         <TextBox x:Name="PoszukiwanyCiag" HorizontalAlignment="Left" Margin="233,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Wpisz poszukiwany ciag" HorizontalAlignment="Left" Margin="233,44,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="Wynik" HorizontalAlignment="Left" Margin="591,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>

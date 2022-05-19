@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace Przeszukiwanie2
 {
-    
-    
-    
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -45,11 +43,46 @@ namespace Przeszukiwanie2
 
             string wynik = "";
             string wynikCzasowy = "";
+
+            int dlugoscInput = InputowyText.Length;
+            int dlugoscSzukane = Szukane.Length;
             
 
             if(ChooseAlgorithm.Text == "1")
             {
                 //brute force
+
+                char[] textArray = InputowyText.ToCharArray();
+                char[] patternArray = Szukane.ToCharArray();
+
+                int textIndex = 0;
+
+                int suma = 0;
+
+                for (textIndex = 0; textIndex < dlugoscInput; textIndex++)
+                {
+                    int textIndexLocal = textIndex;
+                    Boolean match = true;
+                    int matchedIndex = textIndex;
+                    for (int patternIndex = 0; patternIndex < dlugoscSzukane; patternIndex++)
+                    {
+                        if (textArray[textIndexLocal] != patternArray[patternIndex])
+                        {
+                            match = false;
+                            break;
+                        }
+                        textIndexLocal = textIndexLocal + 1;
+                    }
+                    if (match)
+                    {
+                        suma++;
+                    }
+
+                }
+
+                //wyswietlanie wyniku
+                Wynik.Text = suma.ToString();
+                
             }
             else
             {
