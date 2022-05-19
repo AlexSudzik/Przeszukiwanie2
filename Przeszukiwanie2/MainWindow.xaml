@@ -1,0 +1,20 @@
+﻿<Window x:Class="Przeszukiwanie2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Przeszukiwanie2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="InputText" HorizontalAlignment="Left" Margin="28,0,0,0" TextWrapping="Wrap" Text="Choose a file ^" VerticalAlignment="Center" Width="161" Height="308"/>
+        <Button x:Name="InputFile" Content="Choose File" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.497,-3.004"/>
+        <TextBox x:Name="ChooseAlgorithm" HorizontalAlignment="Center" Margin="0,63,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="WybieranieAlgorytmu" Content="Wybierz Algorytm:" HorizontalAlignment="Center" Margin="0,195,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
+        <Label x:Name="WybieranieAlgorytmu1" Content="1) Brute Force" HorizontalAlignment="Center" Margin="0,228,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
+        <Label x:Name="WybieranieAlgorytmu2" Content="2)" HorizontalAlignment="Center" Margin="0,261,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
+        <Label x:Name="WybieranieAlgorytmu3" Content="3)" HorizontalAlignment="Center" Margin="0,294,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
+        <Label x:Name="WybieranieAlgorytmu4" Content="4)" HorizontalAlignment="Center" Margin="0,327,0,0" VerticalAlignment="Top" Height="33" Width="120"/>
+
+    </Grid>
+</Window>
