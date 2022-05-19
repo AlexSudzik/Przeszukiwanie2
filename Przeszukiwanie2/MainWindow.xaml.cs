@@ -17,9 +17,9 @@ using System.Windows.Shapes;
 
 namespace Przeszukiwanie2
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
+    
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -31,6 +31,7 @@ namespace Przeszukiwanie2
         {
             Microsoft.Win32.OpenFileDialog openFileDialog = new OpenFileDialog();
             
+            //otwieranie pliku
             openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
             if (openFileDialog.ShowDialog() == true)
                 InputText.Text = File.ReadAllText(openFileDialog.FileName);
@@ -38,7 +39,73 @@ namespace Przeszukiwanie2
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
+            //deklaracja zmiennych
+            String Szukane = PoszukiwanyCiag.Text;
+            string InputowyText = InputText.Text;
+
+            string wynik = "";
+            string wynikCzasowy = "";
+            
+
+            if(ChooseAlgorithm.Text == "1")
+            {
+                //brute force
+            }
+            else
+            {
+                if(ChooseAlgorithm.Text == "2")
+                {
+                    //kmp
+                }
+                else
+                {
+                    if(ChooseAlgorithm.Text == "3")
+                    {
+                        //boyer moore
+                    }
+                    else
+                    {
+                        if(ChooseAlgorithm.Text == "4")
+                        {
+                            //rabin karp
+                        }
+                        else
+                        {
+                            //gdy ktos wpisze cos innego, niz 1,2,3 lub 4, to wychodzi blad
+                            ChooseAlgorithm.Text = "bledne dane";
+                        }
+
+                    }
+
+
+                }
+            }
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
     }
+
+    
 }
