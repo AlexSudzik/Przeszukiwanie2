@@ -17,6 +17,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
+
+//        !  WAZNE  !
+//
+//  Teraz dziala tylko brute force
+//
+//
+//
+
+
 namespace Przeszukiwanie2
 {
     public partial class MainWindow : Window
@@ -38,24 +49,22 @@ namespace Przeszukiwanie2
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            //deklaracja zmiennych
+            //czytanie pliku i wpisanego ciagu
             String Szukane = PoszukiwanyCiag.Text;
             string InputowyText = InputText.Text;
 
-            string wynik = "";
-            string wynikCzasowy = "";
-
+            //zmienne do magii ponizej
             int dlugoscInput = InputowyText.Length;
             int dlugoscSzukane = Szukane.Length;
 
-
-            //long CzasStartu = DateTime.Now.Ticks;
+            //liczenie czasu dzialania
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
             if (ChooseAlgorithm.Text == "1") //brute force
             {
 
+                //nie wiem po co mi to nawet
                 char[] textArray = InputowyText.ToCharArray();
                 char[] patternArray = Szukane.ToCharArray();
 
@@ -85,13 +94,16 @@ namespace Przeszukiwanie2
 
                 }
 
-                //wyswietlanie wyniku
-                //long CzasKonca = DateTime.Now.Ticks;
+                //wyswietlanie wynikow
                 stopwatch.Stop();
                 Wynik.Text = suma.ToString();
-                //WynikCzasowy.Text = CzasKonca.ToString;//(CzasKonca - CzasStartu);
-               
+
                 WynikCzasowy.Text = stopwatch.Elapsed.ToString();
+
+
+
+
+
 
             }
             else
@@ -116,6 +128,8 @@ namespace Przeszukiwanie2
                         {
                             //gdy ktos wpisze cos innego, niz 1,2,3 lub 4, to wychodzi blad
                             ChooseAlgorithm.Text = "bledne dane";
+                            Wynik.Text = "";
+                            WynikCzasowy.Text = "";
                         }
 
                     }
