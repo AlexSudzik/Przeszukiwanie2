@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -46,11 +47,14 @@ namespace Przeszukiwanie2
 
             int dlugoscInput = InputowyText.Length;
             int dlugoscSzukane = Szukane.Length;
-            
 
-            if(ChooseAlgorithm.Text == "1")
+
+            //long CzasStartu = DateTime.Now.Ticks;
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            if (ChooseAlgorithm.Text == "1") //brute force
             {
-                //brute force
 
                 char[] textArray = InputowyText.ToCharArray();
                 char[] patternArray = Szukane.ToCharArray();
@@ -59,6 +63,7 @@ namespace Przeszukiwanie2
 
                 int suma = 0;
 
+                //magia ktorej nie rozumiem
                 for (textIndex = 0; textIndex < dlugoscInput; textIndex++)
                 {
                     int textIndexLocal = textIndex;
@@ -81,26 +86,31 @@ namespace Przeszukiwanie2
                 }
 
                 //wyswietlanie wyniku
+                //long CzasKonca = DateTime.Now.Ticks;
+                stopwatch.Stop();
                 Wynik.Text = suma.ToString();
-                
+                //WynikCzasowy.Text = CzasKonca.ToString;//(CzasKonca - CzasStartu);
+               
+                WynikCzasowy.Text = stopwatch.Elapsed.ToString();
+
             }
             else
             {
-                if(ChooseAlgorithm.Text == "2")
+                if(ChooseAlgorithm.Text == "2") //kmp
                 {
-                    //kmp
+                    
                 }
                 else
                 {
-                    if(ChooseAlgorithm.Text == "3")
+                    if(ChooseAlgorithm.Text == "3") //boyer moore
                     {
-                        //boyer moore
+                        
                     }
                     else
                     {
-                        if(ChooseAlgorithm.Text == "4")
+                        if(ChooseAlgorithm.Text == "4") //rabin karp
                         {
-                            //rabin karp
+                            
                         }
                         else
                         {
